@@ -3,6 +3,7 @@
 1. Consider all permutations of the numbers 1 to n. A good permutation is one where for any number i at position p in the permutation, i+1 is never at position p+1. For a given n, count the number of good permutations.
 
 TIPS:
+a(n-1) = n * a(n-1) + (n-1) * a(n-2)
 The number of "good permutation"
 n   number of good permutation
 2   1
@@ -21,8 +22,6 @@ package Assignment;
  */
 public class AS1 {
     
-    static int number = 0;
-    
     public static int re(int n){
         
         if(n == 0 || n == 1)
@@ -33,10 +32,8 @@ public class AS1 {
     
     public static void main(String[] args) {
         
-        // a(n) = n * a(n-1) + (n-1) * a(n-2)
-        
-        for(int i = 1; i < 10; i++){
-            System.out.println(i + " : " + re(i));
+        for(int i = 1; i < 9; i++){
+            System.out.println(i+1 + " : " + re(i));
             
         }
         
